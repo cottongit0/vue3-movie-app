@@ -38,7 +38,7 @@ export default {
   mounted(){
     this.init()
   },
-    methods: {
+  methods: {
     async init() {
       const poster = this.movie.Poster
       if (!poster || poster === 'N/A') {
