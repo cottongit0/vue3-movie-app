@@ -28,9 +28,10 @@ export default {
       if (state.loading) return;
 
       commit("updateState", {
-        theMovie: {},
+        message: "",
         loading: true,
       });
+
       try {
         const res = await _fetchMovie({
           ...payload,
