@@ -61,7 +61,7 @@ export default {
             });
           }
         }
-      } catch (message) {
+      } catch ({ message }) {
         commit("updateState", {
           movies: [],
           message,
@@ -76,11 +76,13 @@ export default {
       if (state.loading) return;
 
       commit("updateState", {
+        theMovie: {},
         loading: true,
       });
 
       try {
         const res = await _fetchMovie(payload);
+        console.log(res.data);
         commit("updateState", {
           theMovie: res.data,
         });
