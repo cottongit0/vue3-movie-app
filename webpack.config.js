@@ -28,7 +28,17 @@ module.exports = {
       {
         // 정규표현식
         test: /\.s?css$/,
-        use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
+        use: [
+          "style-loader",
+          "css-loader",
+          "postcss-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              additionalData: "@import '~/scss/main';",
+            },
+          },
+        ],
       },
       {
         test: /\.js$/,
