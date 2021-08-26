@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Home from "./Home";
+import Home from "./Home.vue";
 import Movie from "./Movie";
 import About from "./About";
 import NotFound from "./NotFound";

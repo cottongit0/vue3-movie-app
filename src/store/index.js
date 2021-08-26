@@ -1,4 +1,5 @@
 import { createStore } from "vuex";
+
 import movie from "./movie";
 import about from "./about";
 
